@@ -1,15 +1,14 @@
 Here are some predefined accounts for when you initially run the app.
-
 _______________
-Doctor
-123
+Username: Doctor
+Password: 123
 _______________
-Student
-123
+Username: Student
+Password: 123
 _______________
-Staff
-123
+Username: Staff
+Password: 123
 _______________
-Manager
-123
+Username: Manager
+Password: 123
 _______________
