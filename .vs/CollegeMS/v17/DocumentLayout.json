@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "B:\\courses\\Projects\\ProjectOOP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E0F8D269-9E0C-463B-A0EE-E6BD56D1EE1D}|CollegeMS\\CollegeMS.csproj|b:\\courses\\projects\\projectoop\\collegems\\view\\pages\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E0F8D269-9E0C-463B-A0EE-E6BD56D1EE1D}|CollegeMS\\CollegeMS.csproj|solutionrelative:collegems\\view\\pages\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.xaml",
+              "DocumentMoniker": "B:\\courses\\Projects\\ProjectOOP\\CollegeMS\\View\\Pages\\Login.xaml",
+              "RelativeDocumentMoniker": "CollegeMS\\View\\Pages\\Login.xaml",
+              "ToolTip": "B:\\courses\\Projects\\ProjectOOP\\CollegeMS\\View\\Pages\\Login.xaml",
+              "RelativeToolTip": "CollegeMS\\View\\Pages\\Login.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-22T19:54:31.533Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
