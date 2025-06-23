@@ -1,3 +1,6 @@
+Here are some predefined accounts for when you initially run the app.
+
+_______________
 Doctor
 123
 _______________
