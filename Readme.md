@@ -84,7 +84,7 @@ The application follows modern UI/UX principles for a clean and intuitive experi
 2. Build the project.
 3. Run the application.
 4. On startup, the **Login Panel** will appear.
-5. Enter your **username** and **password**.
+5. Enter your **username** and **password** You can get username and password from "Login Users File".
 6. The system will automatically detect your role and redirect you to your personalized dashboard.
  - Or you can run the executable File "College Management System"
 
