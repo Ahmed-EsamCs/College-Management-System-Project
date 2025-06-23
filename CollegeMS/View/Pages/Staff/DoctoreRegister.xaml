@@ -1,0 +1,56 @@
+﻿<Page x:Class="CollegeMS.View.Pages.Staff.DoctoreRegister"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CollegeMS.View.Pages.Staff"
+      mc:Ignorable="d" 
+      xmlns:userControls="clr-namespace:CollegeMS.View.UserControls"
+      d:DesignHeight="450" d:DesignWidth="800"
+      DataContext="{StaticResource staffViewModel}"
+      Title="DoctoreRegister">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <userControls:TitleBar/>
+
+        <!--Here image -->
+        <Border Grid.Row="1" Panel.ZIndex="0">
+            <Image Source="/Assets/Createdoctor.jpg" Stretch="Fill"/>
+        </Border>
+
+        <!--Here Header of page -->
+        <TextBlock Grid.Row="1"  Text="Enter Doctor Data" FontSize="35" FontWeight="Bold" Foreground="Black"  VerticalAlignment="Top" HorizontalAlignment="Center" />
+
+        <!--Here left of page firstly text block then text box -->
+        <TextBlock Grid.Row="1"  Text="Doctor Name" Style="{StaticResource TEXT_BLOCK}" Margin="230,147,480,258"/>
+        <TextBlock Visibility="Collapsed" Grid.Row="1" Text="Phone Number" Style="{StaticResource TEXT_BLOCK}" Width="100" Margin="230,201,470,204"/>
+        <TextBlock Grid.Row="1" Text="Password" Style="{StaticResource TEXT_BLOCK}" Margin="230,201,480,204"/>
+        <TextBox Text="{Binding doctor.Name , Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Style="{StaticResource textboxx}" Margin="334,134,306,251"/>
+        <TextBox Visibility="Collapsed" Grid.Row="1" Style="{StaticResource textboxx}" Margin="335,193,305,192"/>
+        <TextBox Text="{Binding doctor.Password , Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Style="{StaticResource textboxx}" Margin="334,195,306,190"/>
+
+        <Button Grid.Row="1" Content="Create Doctor" FontSize="12" FontWeight="Bold" Margin="44,140,654,249" IsEnabled="False" Style="{StaticResource RoundButtonWhite}" Cursor="Hand"/>
+
+        <!--Here right of page firstly text block then text box -->
+        <TextBlock Grid.Row="1" Text="Birthdate" Style="{StaticResource TEXT_BLOCK}" Margin="538,143,172,262"/>
+        <TextBlock Grid.Row="1" Text="Email" Style="{StaticResource TEXT_BLOCK}" Margin="538,204,172,201"/>
+        <DatePicker SelectedDate="{Binding doctor.BirthDate, Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Margin="614,134,26,251"/>
+        <TextBox Text="{Binding doctor.Email , Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Style="{StaticResource textboxx}" Margin="616,192,24,193"/>
+
+        <!--Here Buttons -->
+        <Button Command="{Binding RegisterDoctor}" Grid.Row="1" Content="Save" Style="{StaticResource triggerrr}" Margin="664,377,26,10"/>
+        <Button  Command="{Binding navigationComand}" CommandParameter="DashBoardStaff" Grid.Row="1" Content="↩" FontSize="20" BorderBrush="White" Style="{StaticResource triggerrr}"  VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="40,0,0,36"/>
+        <TextBlock Grid.Row="1"  Text="Courses" Style="{StaticResource TEXT_BLOCK}" Margin="230,256,480,149"/>
+        <ComboBox ItemsSource="{Binding courses , Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding doctor.Course , Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Margin="334,247,306,138">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+    </Grid>
+</Page>

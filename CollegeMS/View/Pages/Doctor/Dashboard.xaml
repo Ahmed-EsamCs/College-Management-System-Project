@@ -1,0 +1,35 @@
+﻿<Page x:Class="CollegeMS.View.Pages.Doctor.Dashboard"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CollegeMS.View.Pages.Doctor"
+      mc:Ignorable="d" 
+      xmlns:userControls="clr-namespace:CollegeMS.View.UserControls"
+      d:DesignHeight="450" d:DesignWidth="800"
+      DataContext="{StaticResource doctorViewModel}"
+      Title="Dashboard">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <userControls:TitleBar/>
+        <Grid Grid.Row="1">
+
+            <Border>
+                <Image Source="/Assets/doctormenu2modified.jpg" Stretch="Fill"/>
+            </Border>
+            <!--Doctor Menu buttons in border do not make Buttons in one border pls because it does not run   -->
+            <TextBlock Text="Doctor Dashboard" Foreground="White" FontSize="35" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Segoe UI" Margin="253,40,0,0" />
+            <Button Content="Students" Command="{Binding navigationComand}" CommandParameter="StudentsDataDoctor" Margin="86,267,614,120" Style="{StaticResource ButtonTransparent}" IsEnabled="True" />
+            <Button Visibility="Collapsed" Content="Grades" Margin="194,251,496,136" Style="{StaticResource ButtonTransparent}" IsEnabled="True"   />
+            <Button Visibility="Collapsed" Content="Attendance" Margin="348,251,342,136" Style="{StaticResource ButtonTransparent}" IsEnabled="True" />
+            <Button Content="Courses" Command="{Binding navigationComand}" CommandParameter="AllCoursesDoctor" Margin="350,268,350,119" Style="{StaticResource ButtonTransparent}" IsEnabled="True"/>
+            <Button Content="Your Data"   Command="{Binding navigationComand}" CommandParameter="DoctorData"  Margin="604,268,96,119" Style="{StaticResource ButtonTransparent}" IsEnabled="True" />
+            <Button Visibility="Collapsed" Content="↩"  Command="{Binding navigationComand}" CommandParameter="LogIn" FontSize="20" Style="{StaticResource triggerrr}" Margin="39,377,651,10" IsEnabled="True" />
+        </Grid>
+    </Grid>
+</Page>

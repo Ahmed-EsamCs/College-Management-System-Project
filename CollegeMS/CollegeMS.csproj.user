@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="View\Pages\Staff\CreateCourse.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\Pages\Doctor\Courses.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Pages\Doctor\StudentList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Pages\Staff\CreateCourse.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Pages\Staff\DoctorList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Pages\Staff\CourseList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Pages\Student\GPACalculation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

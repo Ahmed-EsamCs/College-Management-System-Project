@@ -1,0 +1,76 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+	<PropertyGroup>
+		<ApplicationIcon>Assets\Icon\Icon.ico</ApplicationIcon>
+	</PropertyGroup>
+	<ItemGroup>
+    <None Remove="Assets\Doctor Dara.jpg" />
+    <None Remove="Assets\Icon\Icon.ico" />
+    <None Remove="Assets\Icon\MSN Icon.ico" />
+    <None Remove="Assets\Icon\MSN Icon.png" />
+    <None Remove="Assets\manage_dashboard.png" />
+    <None Remove="Assets\student Data Last.jpg" />
+    <None Remove="Assets\your_doctors.png" />
+    <None Remove="Doctor Dara.jpg" />
+    <None Remove="Doctor DataFinal.jpg" />
+    <None Remove="student Data Last.jpg" />
+  </ItemGroup>
+	<ItemGroup>
+	  <Content Include="Assets\Icon\Icon.ico">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.5" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="1.1.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="9.0.5" />
+    <PackageReference Include="Spreads.Native" Version="2020.1.114" />
+    <PackageReference Include="Spreads.SQLite" Version="2020.1.114" />
+    <PackageReference Include="SQLitePCLRaw.core" Version="2.1.10" />
+    <PackageReference Include="System.Buffers" Version="4.5.0" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.119" />
+    <PackageReference Include="System.Memory" Version="4.5.3" />
+    <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
+    <PackageReference Include="System.Reflection.Emit" Version="4.7.0" />
+    <PackageReference Include="System.Reflection.Emit.ILGeneration" Version="4.7.0" />
+    <PackageReference Include="System.Reflection.Emit.Lightweight" Version="4.7.0" />
+    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.7.0" />
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.3" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Createdoctor.jpg" />
+    <Resource Include="Assets\Doctor Dara.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Icon\MSN Icon.png" />
+    <Resource Include="Assets\manage_dashboard.png" />
+    <Resource Include="Assets\dashboard_modified.png" />
+    <Resource Include="Assets\Doctor data modifed.png" />
+    <Resource Include="Assets\doctormenu2modified.jpg" />
+    <Resource Include="Assets\Login panel 144444final.jpg" />
+    <Resource Include="Assets\Modified_StudentMenue.jpg" />
+    <Resource Include="Assets\regist.png" />
+    <Resource Include="Assets\Staff data modified.jpg" />
+    <Resource Include="Assets\student Data Last.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Student_data_modified.jpg" />
+    <Resource Include="Assets\TakeAttendance.png" />
+    <Resource Include="Assets\your_doctors.png" />
+    <Resource Include="Assets\YOUR COURSES MODIFED.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Doctor DataFinal.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+</Project>

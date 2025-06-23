@@ -1,0 +1,82 @@
+﻿<Page x:Class="CollegeMS.View.Pages.Student.MyData"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CollegeMS.View.Pages.Student"
+      mc:Ignorable="d" 
+      xmlns:userControls="clr-namespace:CollegeMS.View.UserControls"
+      d:DesignHeight="450" d:DesignWidth="800"
+      DataContext="{StaticResource studentViewModel}"
+      Title="MyData">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <userControls:TitleBar/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="333*"/>
+                <ColumnDefinition Width="67*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--image -->
+            <Border Grid.ColumnSpan="2">
+            <Image Grid.ColumnSpan="2" Margin="0" Source="/Assets/student Data Last.jpg" Stretch="Fill"/>
+            </Border>
+            <!--Here i make every element then its value respectively -->
+            <TextBlock Text="Student Name:" Style="{StaticResource TEXT_BLOCK}" Margin="379,83,197,322"/>
+            <TextBlock Text="{Binding Student.Name , Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TEXT_BLOCK}" FontSize="10" Width="150" Margin="477,86,39,319" />
+
+            <TextBlock Text="Faculty:" Style="{StaticResource TEXT_BLOCK}" Margin="280,132,296,273"/>
+            <TextBlock Text="Computing and Information Systems" Style="{StaticResource TEXT_BLOCK}" Width="160" FontSize="8.5" Margin="331,136,175,269" FontWeight="Bold"/>
+
+            <TextBlock Text="Level:" Style="{StaticResource StudentDataTEXT_BLOCK}" Margin="280,184,296,221"/>
+            <TextBlock Text="{Binding Student.Level , Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource StudentDataTEXT_BLOCK}" Margin="325,184,251,221"/>
+
+            <TextBlock Text="Email:" Style="{StaticResource StudentDataTEXT_BLOCK}" Margin="280,235,296,170"/>
+            <TextBlock Text="{Binding Student.Email , Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource StudentDataTEXT_BLOCK}" FontSize="8.9" Width="120" Margin="325,238,221,167"/>
+
+            <TextBlock Text="BirthDate:" Style="{StaticResource StudentDataTEXT_BLOCK}" Margin="280,286,296,119"/>
+            <TextBlock Text="{Binding Student.BirthDate , Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource StudentDataTEXT_BLOCK}" Margin="340,286,236,119"/>
+
+            <TextBlock Text="Student ID:" Style="{StaticResource StudentDataTEXT_BLOCK}" Margin="537,133,39,272"/>
+            <TextBlock Text="{Binding Student.id , Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource StudentDataTEXT_BLOCK}" Margin="609,134,101,271" Grid.ColumnSpan="2"/>
+
+            <TextBlock Text="Student Major:" Style="{StaticResource StudentDataTEXT_BLOCK}" Margin="537,183,0,222" HorizontalAlignment="Left" Width="90"/>
+            <TextBlock Text="General" Style="{StaticResource StudentDataTEXT_BLOCK}" Margin="630,184,80,221" Grid.ColumnSpan="2"/>
+
+
+            <TextBlock Text="Parent Phone:" Style="{StaticResource StudentDataTEXT_BLOCK}" Margin="537,285,39,120"/>
+            <TextBlock Text="{Binding Student.ParentPhone , Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource StudentDataTEXT_BLOCK}" Margin="622,285,88,120" Grid.ColumnSpan="2"/>
+
+
+            <!--Here i make textblock as a Header of ComboBox -->
+            <TextBlock Visibility="Collapsed" Text="GPA:" Style="{StaticResource TEXT_BLOCK}" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" Background="#692B1D" Width="42"  Height="27" Margin="390,116,0,0"  />
+
+            <!--<ComboBox Margin="416,126,139,298" Style="{StaticResource StudentDatacombox}" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" >
+                <ComboBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.036"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ComboBox.RenderTransform>
+                <ComboBoxItem  Content="Level 1 GPA" Background="#692B1D" Foreground="White" Width="100"/>
+                <ComboBoxItem  Content="Level 2 GPA" Background="#692B1D" Foreground="White" Width="100"/>
+                <ComboBoxItem  Content="Level 3 GPA" Background="#692B1D" Foreground="White" Width="100"/>
+                <ComboBoxItem  Content="Level 4 GPA" Background="#692B1D" Foreground="White" Width="100"/>
+                <ComboBoxItem  Content="Total GPA" Background="#692B1D" Foreground="White" Width="100"/>
+            </ComboBox>-->
+
+            <!--Here i make back button with polygon as an image -->
+            <Button Content="↩" Command="{Binding navigationComand}" CommandParameter="DashBoardStudent" FontSize="20" Style="{StaticResource triggerrr}" Height="45" Margin="41,365,515,10" />
+            <TextBlock Text="Final Gpa:" Style="{StaticResource StudentDataTEXT_BLOCK}" Margin="537,235,39,170"/>
+            <TextBlock Text="{Binding Student.F_GPA , Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource StudentDataTEXT_BLOCK}" Margin="609,235,101,170" Grid.ColumnSpan="2"/>
+        </Grid>
+    </Grid>
+</Page>

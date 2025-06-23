@@ -1,0 +1,56 @@
+﻿<Page x:Class="CollegeMS.View.Pages.Doctor.MyData"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CollegeMS.View.Pages.Doctor"
+      mc:Ignorable="d" 
+      xmlns:userControls="clr-namespace:CollegeMS.View.UserControls"
+      d:DesignHeight="450" d:DesignWidth="800"
+      DataContext="{StaticResource doctorViewModel}"
+      Title="MyData">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <!--HERE Image -->
+        <userControls:TitleBar/>
+
+        <Border Grid.Row="1" Panel.ZIndex="0">
+            <Image Margin="0" Source="Asse0" Stretch="Fill" Grid.RowSpan="2"/>
+        </Border>
+
+        <Image Margin="0" Source="/Assets/Doctor DataFinal.jpg" Stretch="Fill" Grid.Row="1"/>
+        <!--Properties -->
+        <TextBlock Grid.Row="1" Text="Doctor Name :" Style="{StaticResource TEXT_BLOCK}" Margin="280,43,430,362"/>
+        <TextBlock Grid.Row="1" Text="Faculty :" Style="{StaticResource TEXT_BLOCK}" Margin="280,94,430,311"/>
+        <TextBlock Grid.Row="1" Text="Email :" Style="{StaticResource TEXT_BLOCK}" Margin="535,94,175,311"/>
+        <TextBlock Grid.Row="1" Text="Birthdate :" Style="{StaticResource TEXT_BLOCK}" Margin="287,160,423,245"/>
+        <TextBlock Grid.Row="1" Text="Doctor ID :" Style="{StaticResource TEXT_BLOCK}" Margin="535,43,175,362"/>
+        <!--<TextBlock Grid.Row="1" Text="Doctor Major :" Style="{StaticResource TEXT_BLOCK}" Margin="535,94,175,311"/>-->
+
+        <!--Values -->
+        <TextBlock Grid.Row="1" Text="{Binding doctor.Name}" Style="{StaticResource TEXT_BLOCK}" Margin="374,44,336,361"/>
+        <TextBlock Grid.Row="1" Text="Computing and Information Systems" Width="NaN" FontSize="8" Style="{StaticResource TEXT_BLOCK}" Margin="335,99,307,306"/>
+        <TextBlock Grid.Row="1" Text="{Binding doctor.Email}" Width="NaN" Style="{StaticResource TEXT_BLOCK}" Margin="579,94,63,311"/>
+        <TextBlock Grid.Row="1" Text="{Binding doctor.BirthDate  }" Style="{StaticResource TEXT_BLOCK}" Margin="364,160,381,245" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock Grid.Row="1" Text="{Binding doctor.id}" Style="{StaticResource TEXT_BLOCK}" Margin="604,44,106,361"/>
+        <TextBlock Grid.Row="1" Text="{Binding doctor.Course.Name}" Style="{StaticResource TEXT_BLOCK}" Margin="593,159,117,246"/>
+
+        <!--Back buttn -->
+        <Button Content="↩"  Command="{Binding navigationComand}" CommandParameter="DashBoardDoctor" FontSize="20" Style="{StaticResource triggerrr}" Margin="33,359,657,28" IsEnabled="True" Grid.Row="1" />
+        <TextBlock Grid.Row="1" Style="{StaticResource TEXT_BLOCK}" Margin="535,159,175,246" Text="Course :"/>
+
+    </Grid>
+</Page>
