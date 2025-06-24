@@ -2,12 +2,12 @@
 
 ## 👥 Team Members
 
-- Belal Hassan (Micro)
-- Ahmed Essam Kamal
-- Abdulrahman Mohammed
-- Mohammed Ali Mohammed
-- Mohammed Mostafa Mohammed
-- Mostafa Ahmed Kamal
+- [Belal Hassan (Micro)](https://www.linkedin.com/in/belal-hassan-micro-8565ba191/)
+- [Ahmed Essam Kamal](https://www.linkedin.com/in/ahmed-essam-kamal-84112b348/)
+- [Abdulrahman Mohammed](https://www.linkedin.com/in/abdullrahman-mohamed-595563322/)
+- [Mohammed Ali Mohammed](https://www.linkedin.com/in/%D9%85%D8%AD%D9%85%D8%AF-%D8%B9%D9%84%D9%8A-%D9%85%D8%AD%D9%85%D8%AF-1b45a1371/)
+- [Mohammed Mostafa Mohammed](https://www.linkedin.com/in/mohammed-mustafa-7b9321339/)
+- [Mostafa Ahmed Kamal](https://www.linkedin.com/in/mostafa-ahmed-986411352/)
 
 ---
 
@@ -108,8 +108,8 @@ Each dashboard is designed with specific functionalities relevant to the user’
 
 ## 🛠️ Technologies Used
 
-- "WPF" (Windows Presentation Foundation)
-- "C#"
-- ".NET Framework"
-- "SQLite" (as the local database)
-- "MVVM Pattern"
+- WPF (Windows Presentation Foundation)
+- C#
+- .NET Framework
+- SQLite (as the local database)
+- MVVM Pattern
